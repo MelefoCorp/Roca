@@ -1,0 +1,18 @@
+[submodule "RocaTranslation"]
+	path = RocaTranslation
+	url = git@gitlab.com:MelefoCorp/RocaBot/RocaTranslation.git
+[submodule "RocaTests"]
+	path = RocaTests
+	url = git@gitlab.com:MelefoCorp/RocaBot/RocaTests.git
+[submodule "RocaMongo"]
+	path = RocaMongo
+	url = git@gitlab.com:MelefoCorp/RocaBot/RocaMongo.git
+[submodule "RocaCore"]
+	path = RocaCore
+	url = git@gitlab.com:MelefoCorp/RocaBot/RocaCore.git
+[submodule "RocaBot"]
+	path = RocaBot
+	url = git@gitlab.com:MelefoCorp/RocaBot/RocaBot.git
+[submodule "RocaApi"]
+	path = RocaApi
+	url = git@gitlab.com:MelefoCorp/RocaBot/RocaApi.git
