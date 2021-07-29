@@ -1,7 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
+    <UserSecretsId Condition=" '$(Configuration)'=='Debug' ">Roca</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RocaBot\Roca.Bot\Roca.Bot.csproj" />
+  </ItemGroup>
 
 </Project>
