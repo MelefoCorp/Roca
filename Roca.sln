@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roca.Web", "Roca.Web\Roca.W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roca.Tests", "RocaTests\Roca.Tests\Roca.Tests.csproj", "{FEF3FAD8-9D8E-45CD-BFB5-61CF5856DBAD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roca.Mongo", "RocaMongo\Roca.Mongo\Roca.Mongo.csproj", "{C8954060-7C8B-4804-AD9E-2502C93CB7C4}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roca.Core", "RocaCore\Roca.Core\Roca.Core.csproj", "{5D901BA2-C240-4EB0-B816-4537094AE18D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roca.Bot", "RocaBot\Roca.Bot\Roca.Bot.csproj", "{ECBBE5C2-87DB-463D-A164-420A42E34E5E}"
@@ -31,10 +29,6 @@ Global
 		{FEF3FAD8-9D8E-45CD-BFB5-61CF5856DBAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEF3FAD8-9D8E-45CD-BFB5-61CF5856DBAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEF3FAD8-9D8E-45CD-BFB5-61CF5856DBAD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C8954060-7C8B-4804-AD9E-2502C93CB7C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C8954060-7C8B-4804-AD9E-2502C93CB7C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C8954060-7C8B-4804-AD9E-2502C93CB7C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C8954060-7C8B-4804-AD9E-2502C93CB7C4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5D901BA2-C240-4EB0-B816-4537094AE18D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5D901BA2-C240-4EB0-B816-4537094AE18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D901BA2-C240-4EB0-B816-4537094AE18D}.Release|Any CPU.ActiveCfg = Release|Any CPU

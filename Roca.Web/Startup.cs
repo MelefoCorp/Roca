@@ -2,14 +2,17 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Roca.Bot;
-using Roca.Mongo;
+using Roca.Core;
+using Roca.Core.Extensions;
 using Roca.Web.Data;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -32,6 +35,15 @@ namespace Roca.Web
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddSingleton<RocaBot>();
+            services.AddRocaLocalization();
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                CultureInfo[] supported = Constants.Languages.Select(CultureInfo.GetCultureInfo).ToArray();
+
+                options.DefaultRequestCulture = new RequestCulture("en-US");
+                options.SupportedUICultures = supported;
+                options.SupportedCultures = supported;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +60,7 @@ namespace Roca.Web
                 app.UseHsts();
             }
 
+            app.UseRequestLocalization();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -59,7 +72,7 @@ namespace Roca.Web
                 endpoints.MapFallbackToPage("/_Host");
             });
 
-            MongoService.Initialize(Configuration);
+            Mongo.Initialize(Configuration);
             await app.ApplicationServices.GetService<RocaBot>().Start().ConfigureAwait(false);
         }
     }

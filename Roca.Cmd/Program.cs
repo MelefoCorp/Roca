@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Roca.Bot;
-using Roca.Mongo;
+using Roca.Core;
 
 namespace Roca.Cmd
 {
@@ -13,7 +13,7 @@ namespace Roca.Cmd
         static async Task Main(string[] args)
         {
             IConfiguration config = CreateConfiguration(args);
-            MongoService.Initialize(config);
+            Mongo.Initialize(config);
             RocaBot bot = new(config);
 
             await bot.Start().ConfigureAwait(false);
