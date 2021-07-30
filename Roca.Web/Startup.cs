@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Roca.Bot;
+using Roca.Mongo;
 using Roca.Web.Data;
 using System;
 using System.Collections.Generic;
@@ -30,7 +31,7 @@ namespace Roca.Web
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
-            services.AddSingleton(new RocaBot(Configuration["RocaBot:Token"]));
+            services.AddSingleton<RocaBot>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,6 +59,7 @@ namespace Roca.Web
                 endpoints.MapFallbackToPage("/_Host");
             });
 
+            MongoService.Initialize(Configuration);
             await app.ApplicationServices.GetService<RocaBot>().Start().ConfigureAwait(false);
         }
     }
