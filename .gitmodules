@@ -1,9 +1,6 @@
 [submodule "RocaTests"]
 	path = RocaTests
 	url = git@gitlab.com:MelefoCorp/RocaBot/RocaTests.git
-[submodule "RocaCore"]
-	path = RocaCore
-	url = git@gitlab.com:MelefoCorp/RocaBot/RocaCore.git
 [submodule "RocaBot"]
 	path = RocaBot
 	url = git@gitlab.com:MelefoCorp/RocaBot/RocaBot.git

@@ -7,13 +7,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roca.Web", "Roca.Web\Roca.W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roca.Tests", "RocaTests\Roca.Tests\Roca.Tests.csproj", "{FEF3FAD8-9D8E-45CD-BFB5-61CF5856DBAD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roca.Core", "RocaCore\Roca.Core\Roca.Core.csproj", "{5D901BA2-C240-4EB0-B816-4537094AE18D}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roca.Bot", "RocaBot\Roca.Bot\Roca.Bot.csproj", "{ECBBE5C2-87DB-463D-A164-420A42E34E5E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E30A5C95-CC47-4086-BF67-C8796C94A9A0} = {E30A5C95-CC47-4086-BF67-C8796C94A9A0}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roca.Api", "RocaApi\Roca.Api\Roca.Api.csproj", "{E4232B2B-6B94-4F7F-84CA-237C91419EF0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roca.Cmd", "Roca.Cmd\Roca.Cmd.csproj", "{FC742DE1-C81D-4D0F-8788-ECE0F5307379}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roca.Core", "RocaBot\RocaCore\Roca.Core\Roca.Core.csproj", "{E30A5C95-CC47-4086-BF67-C8796C94A9A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +32,6 @@ Global
 		{FEF3FAD8-9D8E-45CD-BFB5-61CF5856DBAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEF3FAD8-9D8E-45CD-BFB5-61CF5856DBAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEF3FAD8-9D8E-45CD-BFB5-61CF5856DBAD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5D901BA2-C240-4EB0-B816-4537094AE18D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D901BA2-C240-4EB0-B816-4537094AE18D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D901BA2-C240-4EB0-B816-4537094AE18D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D901BA2-C240-4EB0-B816-4537094AE18D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ECBBE5C2-87DB-463D-A164-420A42E34E5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ECBBE5C2-87DB-463D-A164-420A42E34E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECBBE5C2-87DB-463D-A164-420A42E34E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +44,10 @@ Global
 		{FC742DE1-C81D-4D0F-8788-ECE0F5307379}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC742DE1-C81D-4D0F-8788-ECE0F5307379}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC742DE1-C81D-4D0F-8788-ECE0F5307379}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E30A5C95-CC47-4086-BF67-C8796C94A9A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E30A5C95-CC47-4086-BF67-C8796C94A9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E30A5C95-CC47-4086-BF67-C8796C94A9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E30A5C95-CC47-4086-BF67-C8796C94A9A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
