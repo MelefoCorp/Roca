@@ -23,6 +23,7 @@ namespace Roca.Web
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            configuration.CheckConfig();
         }
 
         public IConfiguration Configuration { get; }
